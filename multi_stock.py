@@ -47,12 +47,9 @@ def formatting():
 		writer.writerow(sym)			
 				
 def load_nasdaq():
-	symbols = []
 	with open('./nasdaq.csv','r') as f:
 		reader = csv.reader(f, delimiter=',')
-		for s in reader:
-			if s:
-				return s
+		return(list(reader)[0])
 
 def round_data(data):
 	# price = [open, close, high, low]
@@ -170,5 +167,3 @@ def run():
 	save_to_file(dtts=[DTTS,T])	
 if __name__ == "__main__":
 	run()
-	
-	
