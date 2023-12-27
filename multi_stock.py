@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 import yfinance as yf
 import multiprocessing
-from multiprocessing import Process
 import csv
 
-price_level = 1
+price_level = 3
 
 def load_files():
 	files = ['./NASDAQ.txt','NYSE.txt','AMEX.txt']
